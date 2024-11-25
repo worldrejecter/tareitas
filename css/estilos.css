@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Yanone+Kaffeesatz');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Open sans', sans-serif;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+img_nosotros {
+    
+    padding-top: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #fffffa;
+}
+
+.contenedor {
+    margin: auto;
+    width: 90%;
+    
+}
+.contenido {
+    
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    
+    
+}
+
+.contenido p {
+    
+    margin-top: 16px;
+}
+
+.contacto {
+    padding-top: 20px;
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/*------------------------------Estilos del header*-----------------------*/
+
+.header {
+    height: 60px;
+    background: #0e1542;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.header .contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo, .icon-bars{
+    color: #fff;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.icon-bars {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background: #5f73f2;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+/*--------Estilos del menu-------------*/
+
+.nav {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.4s;
+    
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__link {
+    display: block;
+    padding: 20px;
+    background: #5f73f2;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu__link:hover, .select {
+    background: white;
+    color: #5f73f2;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.mostrar {
+    left: 0;
+}
+
+/*---------------------Estilos del banner------------------*/
+
+
+.banner {
+    margin-top: -60px;
+    position: relative;
+    z-index: -1000;
+    margin-bottom: 20px;
+}
+
+.banner .contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    text-shadow: black 0.1em 0.1em 0.2em
+
+}
+
+.banner__txt {
+    display: none;
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+
+
+
+/*-----------Estilos de Info---------*/
+
+.info__columna {
+    background: #0e1542;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.info__columna img {
+    
+    display: block;
+}
+
+
+
+/*------------Estilos de preview---------------*/
+
+.section__titulo{
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+    
+}
+.preview__columna {
+    position: relative;
+    margin-bottom: 30px;
+}
+.preview__descripcion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: rgba(0,0,0,0.6);
+    width: 60%;
+    height: 100%;
+    padding: 5px;
+    
+}
+
+.preview__titulo {
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+
+/*------------Estilos de footer---------------*/
+
+.footer {
+    background: #0e1542;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.footer .social [class^="icon-"] {
+    display: inline-block;
+    color: #0e1542;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+}
+
+
+/*------------Estilos Responsive---------------*/
+
+
+@media(min-width:480px) {
+    .logo {
+        font-size: 40px;
+    }
+    
+    .banner__titulo {
+        font-size: 30px;
+        margin: 10px 0;
+    }
+    
+    .banner__txt {
+        display: block;
+        font-size: 18px;
+        margin: 7px 0;
+    }
+    
+    .info, .preview {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -180px;
+    }
+    
+    .info__columna {
+        width: 32%;
+    }
+    
+    .info {
+        margin-top: -90previewpx;
+    }
+    
+    .info__titulo {
+        font-size: 30px;
+        margin: 15px 0;
+    }
+    
+    .section__titulo {
+        width: 100%;
+    }
+    
+    .preview {
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+    
+    .preview__columna {
+        
+        width: 49%;
+        
+    }
+    
+    .preview__titulo {
+        
+        font-size: 35px;
+    }
+    
+    .preview__img {
+        width: 100%;
+    }
+    
+    .footer .social [class^="icon-"] {
+        margin: 0 10px;
+    }
+}
+
+@media(min-width:768px) {
+    .banner__titulo {
+        font-size: 50px;
+    }
+    
+    .preview__titulo {
+        font-size: 35px;
+    }
+}
+
+@media(min-width:1024px) {
+    
+    .contenedor {
+        width: 1200px;
+    }
+    
+    .section__titulo {
+        font-size: 45px;
+        margin: 30px 0;
+    }
+    
+    .nav {
+        position: static;
+        width: auto;
+    }
+    
+    .menu {
+        display: flex;
+    }
+    
+    .menu__link {
+        background: none;
+        font-size: 15px;
+    }
+    
+    .menu__link:hover {
+        background: #5f73f2;
+        color: white;
+    }
+    .select {
+        background: #5f73f2;
+        color: white;
+            
+    }
+    
+    .icon-bars {
+        display: none;
+    }
+    
+    .banner__titulo {
+        font-size: 50px;
+    }
+    
+    .banner__txt {
+        
+        font-size: 25px;
+        
+    }
+    .info {
+        margin-top: -160px;
+    }
+    
+    .info__columna {
+        padding: 30px;
+    
+    }
+    .info__titulo {
+        
+        font-size: 40px;
+    }
+    
+    .preview__descripcion {
+        padding: 20px;
+        
+    }
+    
+    .preview__titulo {
+        font-size: 40px;
+    }
+    
+    .preview__txt {
+        font-size: 20px;
+        
+    }
+}
+
+
+@media(min-width:1280px) {
+    
+    .contenedor {
+        width: 1200px;
+    }
+    
+    .logo {
+        font-size: 45px;
+    }
+    
+    .banner .contenedor {
+        top: 40%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
